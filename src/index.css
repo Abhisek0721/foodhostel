@@ -1,13 +1,112 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input {
+  outline: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer components{
+  /* For Mobile */
+    .logo-mobile{
+        @apply text-2xl font-bold italic text-white;
+    }
+    .entryField{
+        @apply border-2 border-black w-[100%] p-3 text-lg rounded-lg mb-4;
+    }
+    .primary-btn{
+        @apply w-[100%] p-3 text-lg rounded-lg bg-red-700 hover:bg-red-600 active:bg-red-500 text-yellow-200 font-semibold lg:cursor-pointer lg:py-1;
+    }
+    .yourinfo{
+      @apply flex py-3 px-6 justify-between shadow-md;
+    }
+    .profile-activity{
+      @apply py-3 px-6 border-b border-black;
+    }
+    .location{
+      @apply flex;
+    }
+    .search-bar{
+      @apply flex;
+    }
+    .detect-location{
+      @apply flex;
+    }
+    .item{
+      @apply w-20 sm:w-40 shadow-lg rounded-md p-1 m-3 bg-red-100 lg:rounded-full;
+    }
+    .item img{
+      @apply w-[70px] h-[50px] sm:w-[300px] sm:h-[100px] lg:rounded-full;
+    }
+    .card{
+      @apply border-b-2 border-black pb-5 shadow-lg rounded-lg lg:w-72 lg:inline-block lg:mx-2;
+    }
+    .food-img{
+      @apply rounded-lg p-3;
+    }
+    /* .food-img img{
+      @apply w-[100%] h-[200px];
+    } */
+    .active-btn{
+      @apply text-2xl mx-3 text-red-600 border-t-2 border-red-600 p-5  transition-colors;
+    }
+    .deactive-btn{
+      @apply text-2xl mx-3 text-black p-5 transition-colors;
+    }
+    /* End of Mobile Design */
+    .aboutus{
+      @apply block mx-8 my-5 sm:mx-20 sm:my-14;
+    }
+}
+
+/* (Start) Mobile Design for otp verification */
+p.sub-title {
+  color: #B5BAB8;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+p span.phone-number {
+  display: block;
+  color: #093030;
+  font-weight: 600;
+}
+
+.wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: space-between;
+  }
+  
+  .wrapper input.field {
+    width: 50px;
+    line-height: 75px;
+    font-size: 32px;
+    border: none;
+    background-color: #EAF5F6;
+    border-radius: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #093030;
+    margin-bottom: 15px;
+  }
+  
+  .wrapper input.field:focus {
+    outline: none;
+  }
+  
+  button.resend {
+    background-color: transparent;
+    border: none;
+    font-weight: 600;
+    color: #3DAFE1;
+    cursor: pointer;
+    margin-bottom: 15px;
+  }
+/* (End) Mobile Design for otp verification */
+
+.navbar{ /* Mobile Navbar */
+  box-shadow: 0px -2px 2px rgb(218, 218, 218);
+  background-color: #EAF5F6;
 }
