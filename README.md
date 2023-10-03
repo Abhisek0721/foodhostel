@@ -1,15 +1,7 @@
-// nginx configuration
+<h1>Food Delivery Web App (Frontend) created using Reactjs, Redux, and Tailwindcss.</h1>
 
-server {
-        index index.html index.htm index.nginx-debian.html;
+### Backend Source Code: https://github.com/Abhisek0721/foodhostel-backend
 
-        server_name foodhostel.com www.foodhostel.com;
+<h2>Here is the UI of Foodhostel</h1>
 
-        location / {
-                # First attempt to serve request as file, then
-                # as directory, then fall back to displaying a 404.
-                # try_files $uri $uri/ =404;
-                proxy_pass http://localhost:5000;
-        }
-
-}
+<img src="https://i.ibb.co/Z13gRT1/Screenshot-2023-10-03-183141.png" alt="" />
